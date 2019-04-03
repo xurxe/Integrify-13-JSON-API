@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+/*         const url = 'https://restcountries.eu/rest/v2/all';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.log(error)
+            }) */
+
+        localStorage.setItem('name', 'Xurxe');
+        localStorage.setItem('age', 29);
+        const skills = ['HTML', 'CSS', 'JS']; // it got stringified
+        localStorage.setItem('skills', skills);
+
+        localStorage.clear();
+
+        const person = {
+            name: 'Xurxe',
+            age: 29,
+            skills: ['HTML', 'CSS', 'JS']
+        };
+        localStorage.setItem('person', person);
+
+        let personStringified = JSON.stringify(person, undefined, 2);
+        localStorage.setItem('person', personStringified);
+
+        console.log(localStorage.getItem('person'));
+
+        const personParsed = JSON.parse(localStorage.getItem('person'));
+
+        console.log(personParsed);
+
+
+
+
+        const product = {
+            name: 'laptop',
+            description: 'Macbook Pro',
+            model: 2018,
+            condition: 'almost new',
+            price: 1000,
+            accessories: ['charger', 'mouse', 'case', 'keyboard', 'VGA adapter']
+        }
+
+        productStringified = JSON.stringify(product, undefined, 2);
+        localStorage.setItem('product', productStringified);
+        console.log(localStorage.getItem('product'));
+
+        const productParsed = JSON.parse(localStorage.getItem('product'));
+        console.log(productParsed);
+
+        let sentence = ''
+        productParsed.accessories.forEach(accessory => {
+            sentence += ' ' + accessory;
+        });
+        console.log(sentence);
+
+    </script>
+
+    <script src="lesson-notes.js"></script>
+
+</body>
+
+
+</html>

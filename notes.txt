@@ -1,0 +1,31 @@
+3.APR.2019: FETCHING
+
+- Go to http://restcountries.eu/
+- Go to https://restcountries.eu/rest/v2/all
+- Servers
+- http (hypertext transfer protocol)
+
+
+
+
+4.APR.2019: LOCAL AND SESSION STORAGE
+
+LOCAL STORAGE:
+    - when you refresh, the data stays there
+    - most important for back end, sometimes for front end too
+    - It is application specific
+    - used, for example, to store user login credentials (when you log out, the application clears the local storage)
+
+    - setItem
+    - getItem
+    - clear
+
+- On the browser console:
+    - localStorage
+    - localStorage.clear()
+
+
+
+SESSION STORAGE:
+    - Is cleared when you the browser (but survives refresh and restore)
+    - otherwise similar to local storage 
